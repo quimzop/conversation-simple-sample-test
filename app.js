@@ -38,7 +38,7 @@ var conversation = new Conversation({
 
 // Endpoint to be call from the client side
 app.post('/api/message', function(req, res) {
-  var workspace = process.env.WORKSPACE_ID || '57e44969-6d96-4fc2-a86b-dd86b9489600';
+  var workspace = '57e44969-6d96-4fc2-a86b-dd86b9489600' || '57e44969-6d96-4fc2-a86b-dd86b9489600';
   if (!workspace || workspace === '57e44969-6d96-4fc2-a86b-dd86b9489600') {
     return res.json({
       'output': {
